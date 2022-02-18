@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/style_header.css" />
+    <link rel="stylesheet" href="CSS/style_editCatalogList.css" />
+    <title>leger</title>
+  </head>
+  <body>    
+    <a name="top"></a>
+
+    <div class="mainPage">
+      
+      <!-- Заголовок -->
+      <div class="header">
+      </div>
+
+      <div class="block block_games">
+        <div class="block__header">
+          <div class="block__header__minus"></div>
+          <div class="block__header__name">Игры</div>
+          <div class="block__header__statistics">547/550</div>
+          <div class="block__header__sedit"></div>
+        </div>
+        <div class="block__item">
+          <div class="block__item__name">Казуальные</div>
+          <div class="block__item__statistics">547/550</div>
+          <div class="block__item__sedit"></div>
+        </div>
+        <div class="block__item">
+          <div class="block__item__name">Аркады</div>
+          <div class="block__item__statistics">547/550</div>
+          <div class="block__item__sedit"></div>
+        </div>
+        <div class="block__item">
+          <div class="block__item__name">Гонки</div>
+          <div class="block__item__statistics">547/550</div>
+          <div class="block__item__sedit"></div>
+        </div>
+        <div class="block__item__plus">
+          <div class="block__plus"></div>
+        </div>
+      </div>
+
+      <div class="block block_app">
+        <div class="block__header">
+          <div class="block__header__plus"></div>
+          <div class="block__header__name">Приложения</div>
+          <div class="block__header__statistics">547/550</div>
+          <div class="block__header__sedit"></div>
+        </div>
+        <div class="block__item">
+          <div class="block__item__name">Офисные</div>
+          <div class="block__item__statistics">547/550</div>
+          <div class="block__item__sedit"></div>
+        </div>
+        <div class="block__item">
+          <div class="block__item__name">Работа с графикой</div>
+          <div class="block__item__statistics">547/550</div>
+          <div class="block__item__sedit"></div>
+        </div>
+        <div class="block__item">
+          <div class="block__item__name">Работа со звуком</div>
+          <div class="block__item__statistics">547/550</div>
+          <div class="block__item__sedit"></div>
+        </div>
+        <div class="block__item__plus">
+          <div class="block__plus"></div>
+        </div>
+      </div>
+
+      <div class="block block_list">
+        <div class="block__item__line"><hr>
+        </div>
+        <div class="block__item item__list">
+          <div class="block__item__name">Популярные игры</div>
+          <div class="block__item__sedit"></div>
+        </div>
+        <div class="block__item item__list">
+          <div class="block__item__name">Популярные приложения</div>
+          <div class="block__item__sedit"></div>
+        </div>
+        <div class="block__item item__list">
+          <div class="block__item__name">Новинки игры</div>
+          <div class="block__item__sedit"></div>
+        </div>
+        <div class="block__item__plus">
+          <div class="block__plus"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script src="JS/script.js"></script>
+
+    <script> 
+      $(function(){
+        $(".header").load("header.html", function () {
+          $(".header__catalog").addClass("header__Active");
+        });
+      });
+    </script> 
+  
+
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/style_header.css" />
+    <link rel="stylesheet" href="CSS/style_editCategory.css" />
+    <title>leger</title>
+  </head>
+  <body>    
+    <a name="top"></a>
+
+    <div class="mainPage">
+      
+      <!-- Заголовок -->
+      <div class="header">
+      </div>
+
+      <div class="viewButton">
+        <a href="" class="viewButton__text">  Просмотр </a>
+      </div>
+
+      <div class="saveButton">
+        <div class="saveButtonArrow"></div>        
+        <a href="" class="saveButton__text">  Сохранить </a>
+      </div>
+
+      <div class="nameCategory">Название категории</div>
+      <div class="nameCategory__input"></div>
+      
+      <div class="activity__text">Активность</div>
+      <div class="activity__checkBox">
+        <div class="activity__checkBoxArrow"></div>
+      </div>
+
+      <div class="parent__text">Родитель</div>
+      <a href="" class="parent__catalog__text">Каталог</a>
+      <a href="" class="parent__edit__text">изменить</a>
+
+      <div class="sinonimURL">Синоним для URL запроса</div>
+      <div class="sinonimURL__input"></div>
+      <div class="sinonimURL__input__box"></div>
+
+      <div class="textEditor"><textarea id="textEditArea"></textarea></div>
+
+      <div class="imageCategory"></div>
+      <div class="imageCategory__Add__text">Добавить изображение</div>
+      <div class="imageCategory__Delete__text">Удалить изображение</div>
+
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script src="JS/script.js"></script>
+
+    <script src="//js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+
+    <script>
+      $(function(){
+        $(".header").load("header.html", function () {
+          $(".header__editCategory").addClass("header__Active");
+        });
+      });
+
+      bkLib.onDomLoaded(function() {
+        new nicEditor({fullPanel : true, maxHeight : 354}).panelInstance('textEditArea');
+      });
+
+    </script> 
+
+  </body>
+</html>

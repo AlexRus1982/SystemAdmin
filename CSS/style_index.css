@@ -1,0 +1,275 @@
+.addButton {
+  position: absolute;
+  width: 200px;
+  height: 30px;
+  left: 974px;
+  top: 164px;
+  
+  background: #0062C1;
+  border-radius: 4px;
+}
+
+.addButton__text {
+  position: absolute;
+  width: 146px;
+  height: 18px;
+  left:27px;
+  top:6px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130.8%;
+  
+  color: #ffffff;
+}
+
+.category__text {
+  position: absolute;
+  width: 109px;
+  height: 26px;
+  left: 81px;
+  top: 174px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 130.8%;
+  
+  
+  color: #000000;
+}
+
+.fromAll__text {
+  position: absolute;
+  width: 66px;
+  height: 24px;
+  left: 1108px;
+  top: 204px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 130.8%;
+  /* identical to box height, or 24px */
+  
+  
+  color: #929292;  
+}
+
+.headerOfListApplication {
+  position: absolute;
+  width: 1093px;
+  height: 40px;
+  left: 81px;
+  top: 239px;
+  
+  background: #FFFFFF;
+  border: 1px solid rgba(104, 104, 104, 0.59);
+  box-sizing: border-box;
+  border-radius: 4px;  
+}
+
+.headerOfListApplication__name {
+  position: absolute;
+  width: 105px;
+  height: 24px;
+  left: 12px;
+  top: 8px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 130.8%;
+  /* identical to box height, or 24px */
+  
+  
+  color: #000000; 
+}
+
+.headerOfListApplication__downloads {
+  position: absolute;
+  width: 80px;
+  height: 24px;
+  left: 619px;
+  top: 8px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 130.8%;
+  /* identical to box height, or 24px */
+  
+  
+  color: #000000;
+}
+
+.headerOfListApplication__activity {
+  position: absolute;
+  width: 94px;
+  height: 24px;
+  left: 840px;
+  top: 8px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 130.8%;
+  /* identical to box height, or 24px */
+  
+  
+  color: #000000;  
+}
+
+.bodyOfListApplication__name {
+  position: absolute;
+  width: 1093px;
+  height: 446px;
+  left: 81px;
+  top: 279px;
+  
+  background: #FFFFFF;
+  border: 1px solid rgba(104, 104, 104, 0.59);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.bodyOfListApplication__item {
+  position: relative;
+  width: 1093px;
+  height: 110px;
+}
+
+.bodyOfListApplication__item__image {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  left: 10px;
+  top: 10px;
+  
+  background: #C4C4C4;
+  border-radius: 4px;
+}
+
+.bodyOfListApplication__item__name {
+  position: absolute;
+  width: 146px;
+  height: 18px;
+  left: 115px;
+  top: 46px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130.8%;
+  /* or 18px */
+  
+  color: #000000;
+}
+
+.bodyOfListApplication__item__downloads {
+  position: absolute;
+  width: 40px;
+  height: 24px;
+  left: 626px;
+  top: 53px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 130.8%;
+  /* identical to box height, or 24px */
+
+  color: #000000;
+}
+
+.bodyOfListApplication__item__activity {
+  position: absolute;
+  width: 94px;
+  height: 30px;
+  left: 877px;
+  top: 47px;
+}
+
+.button__on__off {
+  width: 94px;
+  height: 30px;
+  
+  background: #0062C1;
+  border-radius: 4px;
+}
+
+.button__on__off__text {
+  position: absolute;
+  width: 34px;
+  height: 18px;
+  left: 8px;
+  top: 2px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 130.8%;
+  /* or 24px */
+  
+  color: #FFFFFF;
+
+}
+
+.button__on__off__turn {
+  position: absolute;
+  width: 28px;
+  height: 21px;
+  left: 60px;
+  top: 4.5px;
+  
+  background: #FFFFFF;
+  border-radius: 4px;
+}
+
+.bodyOfListApplication__item__delete {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 1015px;
+  top: 47px;
+
+  background: url(../images/cross.png);  
+  background-size: cover;
+}
+
+.pageCounter {
+  position: absolute;
+  left: 87px;
+  top: 783px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130.8%;
+  /* or 18px */
+  
+  
+  color: #000000;
+}
+
+.pageCounter a {
+ width:20px;
+ margin: 10px;
+
+ font-family: Tahoma;
+ font-style: normal;
+ font-weight: normal;
+ font-size: 20px;
+ line-height: 130.8%;
+}

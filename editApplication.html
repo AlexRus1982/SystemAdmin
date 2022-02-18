@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/style_header.css" />
+    <link rel="stylesheet" href="CSS/style_editApplication.css" />
+    <title>leger</title>
+  </head>
+  <body>    
+    <a name="top"></a>
+
+    <div class="mainPage">
+      
+      <!-- Заголовок -->
+      <div class="header">
+      </div>
+
+      <div class="viewButton">
+        <a href="" class="viewButton__text">  Просмотр </a>
+      </div>
+
+      <div class="saveButton">
+        <div class="saveButtonArrow"></div>        
+        <a href="" class="saveButton__text">  Сохранить </a>
+      </div>
+
+      <div class="nameApplication">Название приложения</div>
+      <div class="nameApplication__input"></div>
+      <div class="sinonimURL">Синоним для URL запроса</div>
+      <div class="sinonimURL__input"></div>
+      <div class="sinonimURL__input__box"></div>
+      <div class="fileLink">Ссылка на файл</div>
+      <div class="fileLink__input"></div>
+      <div class="fileLink__input__box"></div>
+
+      <div class="imageApplication"></div>
+      <div class="imageAdd__text">Добавить изображение</div>
+      <div class="imageDelete__text">Удалить изображение</div>
+
+      <div class="textEditor"><textarea id="textEditArea"></textarea></div>
+
+      <div class="printScreen__text">Принтскрины</div>
+      <div class="printScreen__image0"></div>
+      <div class="printScreen__image1"></div>
+      <div class="printScreen__image2"></div>
+      <div class="printScreen__image3"></div>
+      <div class="printScreen__image4"></div>
+      <div class="printScreen__image5"></div>
+      <div class="printScreen__image6">
+        <div class="printScreen__image__crosslineH"></div>
+        <div class="printScreen__image__crosslineV"></div>
+      </div>
+      <a href="" class="printScreen__delete">Удалить</a>
+
+      <div class="activity__text">Активность</div>
+      <div class="activity__checkBox">
+        <div class="activity__checkBoxArrow"></div>
+      </div>
+
+      <div class="category__text">Категории</div>
+      <div class="category__content">1<br>2<br></div>
+      <a href="" class="category__add__text">Добавить</a>
+      <a href="" class="category__default__text">По умолчанию</a>
+
+      <div class="applicationInfo__text">
+        Разработчик:<br>
+        Категории:<br>
+        Версия Android:<br>
+        Обновлено:<br>
+        Рейтинг:<br>
+        Размер:<br>
+        Возрастное ограничение:<br>
+        Скачали:<br>
+        Распространяется:
+      </div>
+
+      <div class="applicationInfo__data">
+        Talking friend<br>
+        казуальные<br>
+        4.1+<br>
+        29.03.2021<br>
+        4,3<br>
+        69 МБ<br>
+        12+<br>
+        1544<br>
+        бесплатно
+      </div>
+
+      <div class="video__text">Видео</div>
+      <div class="video__image0"></div>
+      <div class="video__image1"></div>
+      <div class="video__image2"></div>
+      <div class="video__image3"></div>
+      <div class="video__image4"></div>
+      <div class="video__image5"></div>
+      <div class="video__image6">
+        <a href="" class="video__image__crosslineH"></a>
+        <a href="" class="video__image__crosslineV"></a>
+      </div>
+      <a href="" class="video__delete">Удалить</a>
+
+
+      <div class="versions__text">Версии</div>
+
+      <div class="versions__info">
+        <div class="versions__info__column0">Название</div><div class="versions__info__column1">Супер приложение версии 3.3</div>
+        <div class="versions__info__column0">Размер</div><div class="versions__info__column1">55 МБ</div>
+        <div class="versions__info__column0">Дата загрузки</div><div class="versions__info__column1">22.10.1968</div>
+        <div class="versions__info__column0">Ссылка на файл</div><div class="versions__info__column1">адрес сайта</div>
+      </div>
+
+      <div class="versions__plus">
+        <a href="" class="versions__plus__crosslineH"></a>
+        <a href="" class="versions__plus__crosslineV"></a>
+      </div>
+
+
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script src="JS/script.js"></script>
+
+    <script src="//js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+
+    <script> 
+      $(function(){
+        $(".header").load("header.html", function () {
+          $(".header__Applications").addClass("header__Active");
+        });
+      });
+
+      bkLib.onDomLoaded(function() {
+        new nicEditor({fullPanel : true, maxHeight : 354}).panelInstance('textEditArea');
+      });
+
+    </script> 
+
+  </body>
+</html>

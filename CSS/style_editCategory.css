@@ -1,0 +1,302 @@
+.mainPage {
+  height: 1106px;
+}
+
+.viewButton {
+  position: absolute;
+  width: 90px;
+  height: 30px;
+  left: 1146px;
+  top: 122px;
+  
+  background: #FFFFFF;
+  border: 1px solid rgba(146, 146, 146, 0.59);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.viewButton__text {
+  position: absolute;
+  width: 63px;
+  height: 18px;
+  left: 13px;
+  top: 6px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130.8%;
+  /* or 18px */
+    
+  color: #0062C1;
+}
+
+.saveButton {
+  position: absolute;
+  width: 110px;
+  height: 30px;
+  left: 1248px;
+  top: 122px;
+  
+  background: #0062C1;
+  border-radius: 4px;
+}
+
+.saveButton__text {
+  position: absolute;
+  width: 68px;
+  height: 18px;
+  left: 30px;
+  top: 5px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130.8%;
+  /* or 18px */
+  
+  
+  color: #FFFFFF;
+  
+}
+
+.saveButtonArrow {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  left: 6px;
+  top: 4px;
+
+  background: url(../images/arrow.png);  
+  background-size: cover;
+}
+
+.nameCategory {
+position: absolute;
+width: 187px;
+height: 24px;
+left: 82px;
+top: 180px;
+
+font-family: Tahoma;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 130.8%;
+
+color: #000000;
+}
+
+.nameCategory__input {
+position: absolute;
+width: 1093px;
+height: 40px;
+left: 265px;
+top: 172px;
+
+background: #FFFFFF;
+border: 1px solid rgba(104, 104, 104, 0.59);
+box-sizing: border-box;
+border-radius: 4px;  
+}
+
+
+.sinonimURL {
+  position: absolute;
+  width: 195px;
+  height: 48px;
+  left: 82px;
+  top: 414px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 130.8%;
+  
+  color: #000000; 
+}
+
+.sinonimURL__input {
+  position: absolute;
+  width: 1093px;
+  height: 40px;
+  left: 265px;
+  top: 413px;
+  
+  background: #FFFFFF;
+  border: 1px solid rgba(104, 104, 104, 0.59);
+  box-sizing: border-box;
+  border-radius: 4px;  
+}
+
+.sinonimURL__input__box {
+  position: absolute;
+  width: 228px;
+  height: 39px;
+  left: 265px;
+  top: 413px;
+  
+  background: #C4C4C4;
+  border-radius: 4px; 
+}
+
+.imageCategory {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  left: 82px;
+  top: 921px;
+  
+  background: url(../images/checker.png);  
+  background-size: cover;
+}
+
+.imageCategory__Add__text {
+  position: absolute;
+  width: 151px;
+  height: 18px;
+  left: 82px;
+  top: 1028px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130.8%;
+  /* or 18px */
+  
+  
+  color: #0062C1;  
+}
+
+.imageCategory__Delete__text {
+  position: absolute;
+  width: 143px;
+  height: 18px;
+  left: 82px;
+  top: 1052px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130.8%;
+  /* or 18px */
+  
+  
+  color: #F00000;  
+}
+
+.textEditor {
+  position: absolute;
+  left: 82px;
+  top: 504px;
+  
+  /*background: url(../images/texteditor.png); */
+  /* background-size: cover; */
+}
+
+.textEditor textarea{
+  position: absolute;
+  width: 1300px;
+  height: 354px;  
+  /*background: url(../images/texteditor.png); */
+  /* background-size: cover; */
+}
+
+.activity__text {
+  position: absolute;
+  width: 94px;
+  height: 24px;
+  left: 82px;
+  top: 254px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 130.8%;
+  /* identical to box height, or 24px */
+  
+  
+  color: #000000;
+  
+}
+
+.activity__checkBox {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 265px;
+  top: 254px;
+  
+  background: #0062C1;
+  border-radius: 4px;  
+}
+
+.activity__checkBoxArrow {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  left: 3px;
+  top: 2px;
+
+  background: url(../images/arrow.png);  
+  background-size: cover;
+}
+
+.parent__text {
+  position: absolute;
+  width: 77px;
+  height: 24px;
+  left: 83px;
+  top: 332px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 130.8%;
+  /* identical to box height, or 24px */
+  
+  
+  color: #000000;
+}
+
+.parent__catalog__text {
+  position: absolute;
+  width: 51px;
+  height: 18px;
+  left: 265px;
+  top: 335px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130.8%;
+  /* or 18px */
+  
+  
+  color: #000000;
+}
+
+.parent__edit__text {
+  position: absolute;
+  width: 60px;
+  height: 18px;
+  left: 326px;
+  top: 335px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130.8%;
+  /* or 18px */
+    
+  color: #0062C1;
+}

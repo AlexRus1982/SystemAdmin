@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/style_header.css" />
+    <link rel="stylesheet" href="CSS/style_editPagesList.css" />
+    <title>leger</title>
+  </head>
+  <body>    
+    <a name="top"></a>
+
+    <div class="mainPage">
+      
+      <!-- Заголовок -->
+      <div class="header">
+      </div>
+
+      <div class="block__text">
+        <div class="block__text__item">О нас</div>
+        <div class="block__text__item">Контакты</div>
+        <div class="block__text__item">Политика конфедициальности</div>
+        <div class="block__text__item">Для правообладателей</div>
+        <div class="block__text__item">Пользовательское соглашение</div>
+        <div class="block__text__item">DMCA</div>
+        <div class="block__text__item">Реклама</div>
+        <div class="block__text__item">Добавить приложение или статью</div>
+        <div class="block__item__plus">
+          <a href="" class="block__plus"></a>
+        </div>
+      </div>
+
+    </div>
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script src="JS/script.js"></script>
+
+    <script>
+      $(function(){
+        $(".header").load("header.html", function () {
+          $(".header__editPagesList").addClass("header__Active");
+        });
+      });
+    </script> 
+  
+
+  </body>
+</html>

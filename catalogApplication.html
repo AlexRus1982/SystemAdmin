@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/style_header.css" />
+    <link rel="stylesheet" href="CSS/style_catalogApplication.css" />
+    <title>leger</title>
+  </head>
+  <body>    
+    <a name="top"></a>
+
+    <div class="mainPage">
+      
+      <!-- Заголовок -->
+      <div class="header">
+      </div>
+
+      <div class="addButton">
+        <a href="" class="addButton__text"> Добавить приложение </a>
+      </div>
+      
+      <div class="category__text">Казуальные</div>
+
+      <div class="fromAll__text">345/600</div>
+
+      <div class="headerOfListApplication">
+        <div class="headerOfListApplication__name">Приложение</div>
+        <div class="headerOfListApplication__downloads">Скачали</div>
+        <div class="headerOfListApplication__activity">Активность</div>
+      </div>
+      <div class="bodyOfListApplication__name">
+        <!--
+        <div class="bodyOfListApplication__item">
+          <div class="bodyOfListApplication__item__image"></div>
+          <div class="bodyOfListApplication__item__name">Название приложения</div>
+          <div class="bodyOfListApplication__item__downloads">1555</div>
+          <div class="bodyOfListApplication__item__activity">
+            <div class="button__on__off"></div>
+            <div class="button__on__off__text">ВКЛ</div>
+            <div class="button__on__off__turn"></div>
+          </div>
+          <div class="bodyOfListApplication__item__delete"></div>
+        </div>
+        <div class="bodyOfListApplication__item">
+          <div class="bodyOfListApplication__item__image"></div>
+          <div class="bodyOfListApplication__item__name">Название приложения</div>
+          <div class="bodyOfListApplication__item__downloads">1555</div>
+          <div class="bodyOfListApplication__item__activity">
+            <div class="button__on__off"></div>
+            <div class="button__on__off__text">ВКЛ</div>
+            <div class="button__on__off__turn"></div>
+          </div>
+          <div class="bodyOfListApplication__item__delete"></div>
+        </div>
+        <div class="bodyOfListApplication__item">
+          <div class="bodyOfListApplication__item__image"></div>
+          <div class="bodyOfListApplication__item__name">Название приложения</div>
+          <div class="bodyOfListApplication__item__downloads">1555</div>
+          <div class="bodyOfListApplication__item__activity">
+            <div class="button__on__off"></div>
+            <div class="button__on__off__text">ВКЛ</div>
+            <div class="button__on__off__turn"></div>
+          </div>
+          <div class="bodyOfListApplication__item__delete"></div>
+        </div>
+        <div class="bodyOfListApplication__item">
+          <div class="bodyOfListApplication__item__image"></div>
+          <div class="bodyOfListApplication__item__name">Название приложения</div>
+          <div class="bodyOfListApplication__item__downloads">1555</div>
+          <div class="bodyOfListApplication__item__activity">
+            <div class="button__on__off"></div>
+            <div class="button__on__off__text">ВКЛ</div>
+            <div class="button__on__off__turn"></div>
+          </div>
+          <div class="bodyOfListApplication__item__delete"></div>
+        </div>
+        -->
+      </div>
+
+      <div class="pageCounter">
+        <a href=""><<</a>
+        <a href=""><</a>
+        <a href="">1</a>
+        <a href="">2</a>
+        <a href="">..</a>
+        <a href="">28</a>
+        <a href="">29</a>
+        <a href="">></a>
+        <a href="">>></a>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="JS/script.js"></script>
+
+    <script> 
+      $(function(){
+        $(".header").load("header.html", function () {
+          $(".header__listApplications").addClass("header__Active");          
+        });
+
+        var page = $_GET('page');
+        if (page <= 0 || page == null){
+          page = 1;
+        }
+
+        $(".bodyOfListApplication__name").load("/php/base.php?method=getListApp&pageNumber=" + page, function(){
+          $( ".bodyOfListApplication__item" ).click(function() {
+            var clickId = $(this).attr('id');
+            alert( "Clicked element with id = " + clickId);
+          });
+
+          $( ".bodyOfListApplication__item__activity" ).click(function(event) {
+            var clickId = $(this).parent().attr('id');
+
+            var buttonClass = $(this).find('.button__on__off__turn');
+
+            var isActive = buttonClass.hasClass('button__on__off__turn_on');
+            if (isActive) {
+              buttonClass.removeClass('button__on__off__turn_on');
+              buttonClass.addClass('button__on__off__turn_off');
+            }
+            else {
+              buttonClass.removeClass('button__on__off__turn_off');
+              buttonClass.addClass('button__on__off__turn_on');
+            }
+
+            event.stopPropagation();
+            $.get( "/php/base.php", { method: 'setActivityApp', appId: clickId, appActivity: (isActive ? '0' : '1') } );
+            /*
+              .done(function( data ) {
+                      alert( "Data Loaded: " + data );
+                  });
+            */
+            /*
+            UPDATE `apkshki_full_base_txt2`
+            SET activity = ''
+            WHERE id = 1;
+            */
+          });
+
+          $( ".bodyOfListApplication__item__delete" ).click(function(event) {
+            var clickId = $(this).parent().attr('id');
+            if(confirm( "Delete " + clickId)) {
+              $(this).parent().remove();
+            };
+            event.stopPropagation();
+            $.get( "/php/base.php", { method: 'deleteApp', appId: clickId } );
+          });
+
+        });
+
+      });
+      
+    </script> 
+
+  </body>
+</html>

@@ -1,0 +1,59 @@
+.header {
+  width: 1438px;
+  height: 80px;
+  background: #bbbbbb;
+
+  padding-left: 10px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 130.8%;
+}
+
+.header a {
+  position: absolute;
+  height: 80px;
+  text-align: center;
+
+  padding-top: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  
+}
+
+.header a:visited {
+  color: #ffffff;
+}
+
+
+.header__catalog {
+  left: 0px;
+}
+
+.header__editCategory {
+  left: 114px;
+}
+
+.header__listApplications {
+  left: 404px;
+}
+
+.header__Applications {
+  left: 630px;
+}
+
+.header__editPagesList {
+  left: 787px;
+}
+
+.header__editPage {
+  left: 928px;
+}
+
+
+.header__Active {
+  background-color: #0000FF;
+  box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.9);
+}

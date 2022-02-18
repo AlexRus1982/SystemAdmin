@@ -1,0 +1,208 @@
+.mainPage {
+  height: 1024px;
+}
+
+.viewButton {
+  position: absolute;
+  width: 90px;
+  height: 30px;
+  left: 1173px;
+  top: 119px;
+  
+  background: #FFFFFF;
+  border: 1px solid rgba(146, 146, 146, 0.59);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.viewButton__text {
+  position: absolute;
+  width: 63px;
+  height: 18px;
+  left: 13px;
+  top: 6px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130.8%;
+  /* or 18px */
+    
+  color: #0062C1;
+}
+
+.saveButton {
+  position: absolute;
+  width: 110px;
+  height: 30px;
+  left: 1275px;
+  top: 119px;
+  
+  background: #0062C1;
+  border-radius: 4px;
+}
+
+.saveButton__text {
+  position: absolute;
+  width: 68px;
+  height: 18px;
+  left: 30px;
+  top: 5px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130.8%;
+  /* or 18px */
+  
+  
+  color: #FFFFFF;
+  
+}
+
+.saveButtonArrow {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  left: 6px;
+  top: 4px;
+
+  background: url(../images/arrow.png);  
+  background-size: cover;
+}
+
+.namePage {
+position: absolute;
+width: 187px;
+height: 24px;
+left: 85px;
+top: 194px;
+
+font-family: Tahoma;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 130.8%;
+
+color: #000000;
+}
+
+.namePage__input {
+position: absolute;
+width: 1093px;
+height: 40px;
+left: 295px;
+top: 186px;
+
+background: #FFFFFF;
+border: 1px solid rgba(104, 104, 104, 0.59);
+box-sizing: border-box;
+border-radius: 4px;  
+}
+
+
+.sinonimURL {
+  position: absolute;
+  width: 195px;
+  height: 48px;
+  left: 85px;
+  top: 282px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 130.8%;
+  
+  color: #000000; 
+}
+
+.sinonimURL__input {
+  position: absolute;
+  width: 1093px;
+  height: 40px;
+  left: 295px;
+  top: 281px;
+  
+  background: #FFFFFF;
+  border: 1px solid rgba(104, 104, 104, 0.59);
+  box-sizing: border-box;
+  border-radius: 4px;  
+}
+
+.sinonimURL__input__box {
+  position: absolute;
+  width: 228px;
+  height: 39px;
+  left: 295px;
+  top: 281px;
+  
+  background: #C4C4C4;
+  border-radius: 4px; 
+}
+
+.imageApplication {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  left: 85px;
+  top: 385px;
+  
+  background: url(../images/checker.png);  
+  background-size: cover;
+}
+
+.imageAdd__text {
+  position: absolute;
+  width: 151px;
+  height: 18px;
+  left: 85px;
+  top: 492px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130.8%;
+  /* or 18px */
+  
+  
+  color: #0062C1;  
+}
+
+.imageDelete__text {
+  position: absolute;
+  width: 143px;
+  height: 18px;
+  left: 85px;
+  top: 516px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130.8%;
+  /* or 18px */
+  
+  
+  color: #F00000;  
+}
+
+.textEditor {
+  position: absolute;
+  left: 85px;
+  top: 552px;
+  
+  /*background: url(../images/texteditor.png); */
+  /* background-size: cover; */
+}
+
+.textEditor textarea{
+  position: absolute;
+  width: 1300px;
+  height: 354px;  
+  /*background: url(../images/texteditor.png); */
+  /* background-size: cover; */
+}

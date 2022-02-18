@@ -1,0 +1,48 @@
+.mainPage {
+  height: 1024px;
+}
+
+
+.block__text {
+  position: absolute;
+  width: 345px;
+  left: 85px;
+  top: 131px;
+}
+
+.block__text__item {
+  height: 18px;
+
+  margin: 20px;
+  margin-left: 10px;
+
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130.8%;
+  /* or 18px */
+
+  color: #000000;
+}
+
+.block__item__plus {
+  position: relative;
+  width: 300px;
+  height: 36px;
+  
+  border-radius: 2px;
+  margin: 1px;
+}
+
+
+.block__plus {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 5px;
+  top: 9px;
+
+  background: url(../images/plus_icon-icons.com_61187.png);
+  background-size: cover;
+}

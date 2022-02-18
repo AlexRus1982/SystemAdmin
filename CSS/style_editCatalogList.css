@@ -1,0 +1,192 @@
+.mainPage {
+  height: 1024px;
+}
+
+
+.block {
+  position: absolute;
+  width: 345px;
+  left: 64px;
+}
+
+.block_games {
+  top: 138px;
+}
+
+
+.block__header {
+  position: relative;
+  width: 345px;
+  height: 36px;
+  
+  background: #C4C4C4;
+  border-radius: 2px;
+  margin: 1px;
+}
+
+.block__header__minus {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 9px;
+  top: 9px;
+
+  background: url(../images/minus_icon-icons.com_61183.png);
+  background-size: cover;
+}
+
+.block__header__plus {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 9px;
+  top: 9px;
+
+  background: url(../images/plus_icon-icons.com_61187.png);
+  background-size: cover;
+}
+
+.block__header__name {
+  position: absolute;
+  height: 24px;
+  left: 53px;
+  top: 6px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 130.8%;
+  /* identical to box height, or 24px */
+  
+  
+  color: #4E4E4E; 
+}
+
+.block__header__statistics {
+  position: absolute;
+  width: 52px;
+  height: 18px;
+  left: 262px;
+  top: 9px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130.8%;
+  /* or 18px */
+  
+  
+  color: #686868;
+}
+
+.block__header__sedit {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 324px;
+  top: 11px;
+
+  background: url(../images/edit_icon-icons.com_61193.png);
+  background-size: cover;
+}
+
+.block__item {
+  position: relative;
+  width: 300px;
+  height: 36px;
+  left: 45px;
+  
+  background: #C4C4C4;
+  border-radius: 2px;
+  margin: 1px;
+}
+
+.block__item__name {
+  position: absolute;
+  height: 18px;
+  left: 31px;
+  top: 9px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130.8%;
+  /* or 18px */
+  
+  
+  color: #4E4E4E;
+}
+
+.block__item__statistics {
+  position: absolute;
+  width: 52px;
+  height: 18px;
+  left: 217px;
+  top: 9px;
+  
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130.8%;
+  /* or 18px */
+  
+  
+  color: #686868;
+}
+
+.block__item__sedit {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 279px;
+  top: 11px;
+
+  background: url(../images/edit_icon-icons.com_61193.png);
+  background-size: cover;
+}
+
+.block__item__plus {
+  position: relative;
+  width: 300px;
+  height: 36px;
+  left: 45px;
+  
+  border-radius: 2px;
+  margin: 1px;
+}
+
+
+.block__plus {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 9px;
+  top: 9px;
+
+  background: url(../images/plus_icon-icons.com_61187.png);
+  background-size: cover;
+}
+
+.block_app {
+ top: 375px;
+}
+
+.block_list {
+  top: 634px;
+ }
+
+ .block__item__line {
+  position: relative;
+  width: 300px;
+  height: 2px;
+  left: 45px;
+  padding-left: 2px;
+ }
+
+.item__list {
+  margin-top: 16px;
+}

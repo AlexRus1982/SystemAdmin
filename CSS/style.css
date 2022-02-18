@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-style: normal;
+  text-decoration: none;
+  list-style: none;
+  font-family: "tahoma", sans-serif;
+  min-width: 400;
+}
+
+@font-face {
+  font-family: "tahoma";
+  src: url("../fonts/tahoma.ttf");
+  font-weight: normal;
+  font-display: swap;
+  font-style: normal;
+}
+
+body {
+  background: #c5c5c5;
+  margin: 50px;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.mainPage
+{
+  border: 1px solid #0000006e;
+  background: #f8f8f8;
+  position: relative;
+  width: 1440px;
+  left: 50%;
+  margin-left: -720px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.75);
+}
