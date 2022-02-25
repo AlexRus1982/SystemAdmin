@@ -10,10 +10,6 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
-    />
-    <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
     />
     <link rel="stylesheet" href="CSS/normalize.css" />
@@ -41,32 +37,40 @@
       </div>
 
       <div class="nameApplication">Название приложения</div>
-      <div class="nameApplication__input"></div>
+      <div class="nameApplication__input"><input type="text" class="nameApplication__input__text"></div>
       <div class="sinonimURL">Синоним для URL запроса</div>
-      <div class="sinonimURL__input"></div>
-      <div class="sinonimURL__input__box"></div>
+      <div class="sinonimURL__input"><input type="text" class="sinonimURL__input__text"></div>
+      <!--<div class="sinonimURL__input__box"></div>-->
       <div class="fileLink">Ссылка на файл</div>
-      <div class="fileLink__input"></div>
-      <div class="fileLink__input__box"></div>
+      <div class="fileLink__input"><input type="text" class="fileLink__input__text"></div>
+      <!--<div class="fileLink__input__box"></div>-->
 
-      <div class="imageApplication"></div>
+      <div class="imageApplication">
+        <div class="imageApplication__edit-button"></div>
+        <div class="imageApplication__delete-button"></div>
+      </div>
+
+      <!--
       <div class="imageAdd__text">Добавить изображение</div>
       <div class="imageDelete__text">Удалить изображение</div>
+      -->
 
       <div class="textEditor"><textarea id="textEditArea"></textarea></div>
 
-      <div class="printScreen__text">Принтскрины</div>
-      <div class="printScreen__image0"></div>
-      <div class="printScreen__image1"></div>
-      <div class="printScreen__image2"></div>
-      <div class="printScreen__image3"></div>
-      <div class="printScreen__image4"></div>
-      <div class="printScreen__image5"></div>
-      <div class="printScreen__image6">
-        <div class="printScreen__image__crosslineH"></div>
-        <div class="printScreen__image__crosslineV"></div>
+      <div class="printScreen__text">Скриншоты</div>
+      <div class="printScreen__images">
+        <!--
+        <img class="printScreen__image"></img>
+        <img class="printScreen__image"></img>
+        <img class="printScreen__image"></img>
+        <img class="printScreen__image"></img>
+        <img class="printScreen__image"></img>
+        <img class="printScreen__image"></img>
+        <img class="printScreen__image"></img>
+        <img class="printScreen__image"></img>
+        -->
       </div>
-      <a href="" class="printScreen__delete">Удалить</a>
+      <div class="printScreen__add"></div>
 
       <div class="activity__text">Активность</div>
       <div class="activity__checkBox">
@@ -103,17 +107,17 @@
       </div>
 
       <div class="video__text">Видео</div>
-      <div class="video__image0"></div>
-      <div class="video__image1"></div>
-      <div class="video__image2"></div>
-      <div class="video__image3"></div>
-      <div class="video__image4"></div>
-      <div class="video__image5"></div>
-      <div class="video__image6">
-        <a href="" class="video__image__crosslineH"></a>
-        <a href="" class="video__image__crosslineV"></a>
+      <div class="videos">
+        <!--
+        <div class="video__image0"></div>
+        <div class="video__image1"></div>
+        <div class="video__image2"></div>
+        <div class="video__image3"></div>
+        <div class="video__image4"></div>
+        <div class="video__image5"></div>
+        -->
       </div>
-      <a href="" class="video__delete">Удалить</a>
+      <div class="video__add"></div>
 
 
       <div class="versions__text">Версии</div>
@@ -130,7 +134,6 @@
         <a href="" class="versions__plus__crosslineV"></a>
       </div>
 
-
     </div>
 
     <script
@@ -145,7 +148,7 @@
 
     <script src="//js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
 
-    <script> 
+    <script>
       $(function(){
         $(".header").load("header.html", function () {
           $(".header__Applications").addClass("header__Active");
@@ -155,6 +158,101 @@
       bkLib.onDomLoaded(function() {
         new nicEditor({fullPanel : true, maxHeight : 354}).panelInstance('textEditArea');
       });
+
+
+      var appId = $_GET('appId');
+      if (appId <= 0 || appId == null){
+        appId = 0;
+      }
+
+      $.get( "/php/base.php", { method: 'getAppInfo', appId: appId } )
+        .done(function( data ) {
+          let json = JSON.parse(data);
+          /*
+          alert(json['version1'] + '\n' + 
+                json['version2'] + '\n' + 
+                json['version3'] + '\n' + 
+                json['version4']);
+          */
+
+          $('.nameApplication__input__text').val(json['name']);
+          $('.sinonimURL__input__text').val(json['url']);
+          $('.fileLink__input__text').val(json['file']);
+
+          $('.imageApplication').append('<img src="' + json['main_image'] + '" class="imageApplication__image"></img>');
+          $('.nicEdit-main').append(json['description']);
+
+
+          if (json['images'].length > 0) {
+            var images = json['images'].split(';');
+            for (let i = 0; i < images.length; i++)
+            {
+              let image = '<a href="' + images[i] + '" target="_blank"><img class="printScreen__image" src="' + images[i] + '"></img></a>';
+              $('.printScreen__images').append(image);
+            }
+          }
+
+          if (json['video'].length > 0) {
+            var videos = json['video'].split(';');      
+            for (let i = 0; i < videos.length; i++)
+            {
+              let video = '<iframe class="video" src="' + videos[i] + '" frameborder="0" allowfullscreen="allowfullscreen"></iframe>';
+              $('.videos').append(video);
+            }
+
+            /*
+            <iframe src="https://www.youtube.com/embed/8nqKrrxlkio" width="160" height="100" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+            */
+          }
+
+
+        /*
+          <div class="applicationInfo__text">
+        Разработчик:<br>
+        Категории:<br>
+        Версия Android:<br>
+        Обновлено:<br>
+        Рейтинг:<br>
+        Размер:<br>
+        Возрастное ограничение:<br>
+        Скачали:<br>
+        Распространяется:
+      </div>
+
+      <div class="applicationInfo__data">
+        Talking friend<br>
+        казуальные<br>
+        4.1+<br>
+        29.03.2021<br>
+        4,3<br>
+        69 МБ<br>
+        12+<br>
+        1544<br>
+        бесплатно
+      </div>
+      */
+
+        let category  = json['category'];
+        if (category.indexOf('>') >= 0)
+        {
+          category = category.substring(category.indexOf('>') + 1);
+        }
+
+        let appInfo   = json['developer'] + "<br>";
+            appInfo  += category + "<br>";
+            appInfo  += json['android version'] + "<br>";
+            appInfo  += json['update'] + "<br>";
+            appInfo  += '4,3' + "<br>";
+            appInfo  += json['size'] + "<br>";
+            appInfo  += json['limits'] + "<br>";
+            appInfo  += json['downloads'] + "<br>";
+            appInfo  += 'бесплатно' + "<br>";
+        $('.applicationInfo__data').html(appInfo);
+
+
+        });
+
+
 
     </script> 
 

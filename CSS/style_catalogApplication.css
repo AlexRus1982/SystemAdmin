@@ -1,24 +1,25 @@
+/*
 .mainPage {
-  height: 1024px;
+  height: 750px;
 }
+*/
 
 .addButton {
-  position: absolute;
+  display: inline-block;
   width: 200px;
   height: 30px;
-  left: 974px;
-  top: 164px;
+  margin-left: 570px;
+  padding-top: 6px;
   
   background: #0062C1;
   border-radius: 4px;
 }
 
 .addButton__text {
-  position: absolute;
   width: 146px;
   height: 18px;
-  left:27px;
-  top:6px;
+  margin-left:27px;
+  margin-top:10px;
   
   font-family: Tahoma;
   font-style: normal;
@@ -29,34 +30,64 @@
   color: #ffffff;
 }
 
+.block1 {
+  width: 100%;
+  /*height: 40px;*/
+  margin-top: 20px;
+  margin-bottom: 30px;
+  /*background-color: crimson;*/
+}
+
 .category__text {
-  position: absolute;
-  width: 109px;
-  height: 26px;
-  left: 81px;
-  top: 174px;
+  display: inline-block;
+  width: 230px;
+  height: 32px;
+  margin-left: 85px;
   
   font-family: Tahoma;
   font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
+  font-weight: bold;
+  font-size: 32px;
   line-height: 130.8%;
   
   
   color: #000000;
 }
 
-.fromAll__text {
-  position: absolute;
-  width: 66px;
-  height: 24px;
-  left: 1108px;
-  top: 204px;
+
+.category__select {
+  display: inline-block;
+  width: 330px;
+  height: 40px;
+  margin-left: -50px;
   
   font-family: Tahoma;
   font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 130.8%;
+  
+  
+  color: #000000;
+}
+
+.block1__space {
+  display: inline-block;
+  margin-right: -940px;
+  width: 100%;
+  height: 32px;
+}
+
+.fromAll__text {
+  display: inline-block;
+  width: 250px;
+  height: 24px;
+  text-align: right;
+
+  font-family: Tahoma;
+  font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 32px;
   line-height: 130.8%;
   /* identical to box height, or 24px */
   
@@ -64,12 +95,18 @@
   color: #929292;  
 }
 
+.block2 {
+  width: 100%;
+  /*height: 40px;*/
+  /*background-color: rgb(6, 255, 89);*/
+}
+
+
 .headerOfListApplication {
-  position: absolute;
-  width: 1093px;
+  width: 1160px;
   height: 40px;
-  left: 81px;
-  top: 239px;
+  margin-left: 81px;
+  margin-top: 10px;
   
   background: #FFFFFF;
   border: 1px solid rgba(104, 104, 104, 0.59);
@@ -78,11 +115,11 @@
 }
 
 .headerOfListApplication__name {
-  position: absolute;
+  display: inline-block;
   width: 105px;
   height: 24px;
-  left: 12px;
-  top: 8px;
+  margin-left: 35px;
+  margin-top: 8px;
   
   font-family: Tahoma;
   font-style: normal;
@@ -96,11 +133,11 @@
 }
 
 .headerOfListApplication__downloads {
-  position: absolute;
+  display: inline-block;
   width: 80px;
   height: 24px;
-  left: 619px;
-  top: 8px;
+  margin-left: 500px;
+  margin-top: 8px;
   
   font-family: Tahoma;
   font-style: normal;
@@ -114,29 +151,29 @@
 }
 
 .headerOfListApplication__activity {
-  position: absolute;
+  display: inline-block;
   width: 94px;
   height: 24px;
-  left: 840px;
-  top: 8px;
+  margin-left: 141px;
+  margin-top: 8px;
   
   font-family: Tahoma;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 130.8%;
-  /* identical to box height, or 24px */
-  
+  /* identical to box height, or 24px */  
   
   color: #000000;  
 }
 
 .bodyOfListApplication__name {
-  position: absolute;
-  width: 1093px;
-  height: 446px;
-  left: 81px;
-  top: 279px;
+
+  width: 1160px;
+  height: 565px;
+  margin-left: 81px;
+  margin-top: 10px;
+  padding-top: 5px;
   
   background: #FFFFFF;
   border: 1px solid rgba(104, 104, 104, 0.59);
@@ -149,8 +186,9 @@
 
 .bodyOfListApplication__item {
   position: relative;
-  width: 1072px;
+  width: 1070px;
   height: 110px;
+  left: 30px;
   transition: 0.5s;
 
 /*
@@ -181,9 +219,14 @@
 }
 
 .bodyOfListApplication__item:hover{
-  background-color: aqua;
+  /*background-color: rgba(0, 17, 255, 0.404);*/
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+  
   cursor: pointer;
   transition: 0.5s;
+  
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 
@@ -200,19 +243,22 @@
 
 .bodyOfListApplication__item__name {
   position: absolute;
-  width: 146px;
-  height: 18px;
+  width: 500px;
+  height: 20px;
   left: 115px;
-  top: 46px;
+  
+  top: 50%;
+  margin-top: -10px;
   
   font-family: Tahoma;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 130.8%;
   /* or 18px */
   
   color: #000000;
+  /*background-color: brown;*/
 }
 
 .bodyOfListApplication__item__downloads {
@@ -298,11 +344,18 @@
   background-size: cover;
 }
 
+.block3 {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  /*height: 40px;*/
+  /*background-color: rgb(223, 247, 11);*/
+}
+
 .pageCounter {
-  position: absolute;
-  left: 87px;
-  top: 783px;
-  
+  display: inline-block;
+  margin-left: 85px;
+
   font-family: Tahoma;
   font-style: normal;
   font-weight: normal;

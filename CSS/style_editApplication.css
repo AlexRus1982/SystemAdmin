@@ -6,8 +6,8 @@
   position: absolute;
   width: 90px;
   height: 30px;
-  left: 1176px;
-  top: 200px;
+  left: 825px;
+  top: 100px;
   
   background: #FFFFFF;
   border: 1px solid rgba(146, 146, 146, 0.59);
@@ -36,8 +36,8 @@
   position: absolute;
   width: 110px;
   height: 30px;
-  left: 1278px;
-  top: 200px;
+  left: 925px;
+  top: 100px;
   
   background: #0062C1;
   border-radius: 4px;
@@ -78,7 +78,7 @@
   width: 187px;
   height: 24px;
   left: 85px;
-  top: 252px;
+  top: 152px;
 
   font-family: Tahoma;
   font-style: normal;
@@ -90,25 +90,31 @@
 }
 
 .nameApplication__input {
-position: absolute;
-width: 1093px;
-height: 40px;
-left: 295px;
-top: 244px;
+  position: absolute;
+  width: 745px;
+  height: 40px;
+  left: 295px;
+  top: 144px;
 
-background: #FFFFFF;
-border: 1px solid rgba(104, 104, 104, 0.59);
-box-sizing: border-box;
-border-radius: 4px;  
+  background: #FFFFFF;
+  border: 1px solid rgba(104, 104, 104, 0.59);
+  box-sizing: border-box;
+  border-radius: 4px;  
 }
 
+.nameApplication__input__text {
+  height: 35px;
+  width: 740px;
+  padding-left: 20px;
+  border: 0px;
+}
 
 .sinonimURL {
   position: absolute;
   width: 195px;
   height: 48px;
   left: 85px;
-  top: 309px;
+  top: 209px;
   
   font-family: Tahoma;
   font-style: normal;
@@ -121,10 +127,10 @@ border-radius: 4px;
 
 .sinonimURL__input {
   position: absolute;
-  width: 1093px;
+  width: 745px;
   height: 40px;
   left: 295px;
-  top: 308px;
+  top: 215px;
   
   background: #FFFFFF;
   border: 1px solid rgba(104, 104, 104, 0.59);
@@ -132,12 +138,19 @@ border-radius: 4px;
   border-radius: 4px;  
 }
 
+.sinonimURL__input__text {
+  height: 35px;
+  width: 740px;
+  padding-left: 20px;
+  border: 0px;
+}
+
 .sinonimURL__input__box {
   position: absolute;
   width: 228px;
   height: 39px;
   left: 295px;
-  top: 308px;
+  top: 215px;
   
   background: #C4C4C4;
   border-radius: 4px; 
@@ -148,7 +161,7 @@ border-radius: 4px;
   width: 195px;
   height: 24px;
   left: 85px;
-  top: 378px;
+  top: 290px;
   
   font-family: Tahoma;
   font-style: normal;
@@ -163,10 +176,10 @@ border-radius: 4px;
 
 .fileLink__input {
   position: absolute;
-  width: 1093px;
+  width: 745px;
   height: 40px;
   left: 295px;
-  top: 366px;
+  top: 285px;
   
   background: #FFFFFF;
   border: 1px solid rgba(104, 104, 104, 0.59);
@@ -174,12 +187,19 @@ border-radius: 4px;
   border-radius: 4px;  
 }
 
+.fileLink__input__text {
+  height: 35px;
+  width: 740px;
+  padding-left: 20px;
+  border: 0px;
+}
+
 .fileLink__input__box {
   position: absolute;
   width: 228px;
   height: 39px;
   left: 295px;
-  top: 366px;
+  top: 285px;
   
   background: #C4C4C4;
   border-radius: 4px;  
@@ -187,14 +207,64 @@ border-radius: 4px;
 
 .imageApplication {
   position: absolute;
-  width: 90px;
-  height: 90px;
-  left: 85px;
-  top: 455px;
+  width: 180px;
+  height: 180px;
+  left: 1055px;
+  top: 145px;
   
+  /*
   background: url(../images/checker.png);  
   background-size: cover;
+  */
+  border-radius: 15px;
 }
+
+.imageApplication:hover .imageApplication__image{
+  z-index: 0;
+}
+
+.imageApplication__edit-button {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  
+  background: url(../images/edit-validated_40458.png);  
+  background-size: cover;
+}
+
+.imageApplication__edit-button:hover {
+  cursor: pointer;
+}
+
+.imageApplication__delete-button {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 10px;
+  left: 52px;
+  z-index: 1;
+  
+  background: url(../images/Button_Delete-01_25095.png);  
+  background-size: cover;
+}
+
+.imageApplication__delete-button:hover {
+  cursor: pointer;
+}
+
+
+.imageApplication__image {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  
+  border-radius: 15px;
+  z-index: 2;
+}
+
 
 .imageAdd__text {
   position: absolute;
@@ -235,7 +305,7 @@ border-radius: 4px;
 .textEditor {
   position: absolute;
   left: 85px;
-  top: 637px;
+  top: 337px;
   
   /*background: url(../images/texteditor.png); */
   /* background-size: cover; */
@@ -243,7 +313,7 @@ border-radius: 4px;
 
 .textEditor textarea{
   position: absolute;
-  width: 1300px;
+  width: 1155px;
   height: 354px;  
   /*background: url(../images/texteditor.png); */
   /* background-size: cover; */
@@ -253,13 +323,13 @@ border-radius: 4px;
   position: absolute;
   width: 111px;
   height: 24px;
-  left: 85px;
-  top: 1137px;
+  left: 105px;
+  top: 730px;
   
   font-family: Tahoma;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 130.8%;
   /* identical to box height, or 24px */
   
@@ -267,118 +337,51 @@ border-radius: 4px;
   color: #000000;
 }
 
-.printScreen__image0 {
+.printScreen__images {
   position: absolute;
-  width: 150px;
-  height: 150px;
+  width: 1155px;
+  height: 270px;
   left: 85px;
-  top: 1188px;
+  top: 770px;
+  overflow-x: auto;
+  overflow-y: auto;
   
-  background: #C4C4C4;
-  border-radius: 4px;  
+  /*background: #C4C4C4;*/
+  border:1px solid #00000044;
 }
 
-.printScreen__image1 {
+
+.printScreen__image {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  max-width: 250px;
+  max-height: 250px;
+  margin: 10px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  
+  background: #fbff00;
+  border-radius: 15px;  
+  border:2px solid #000000;
+}
+
+.printScreen__add {
   position: absolute;
-  width: 150px;
-  height: 150px;
-  left: 257px;
-  top: 1188px;
-  
-  background: #C4C4C4;
-  border-radius: 4px;
+  width: 48px;
+  height: 48px;
+  left: 1190px;
+  top: 1045px;
+
+  background-image: url(/images/Plus_36851.png);
+  background-size: cover;
 }
 
-.printScreen__image2 {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  left: 429px;
-  top: 1188px;
-  
-  background: #C4C4C4;
-  border-radius: 4px;
+.printScreen__add:hover {
+  cursor: pointer;
 }
 
-.printScreen__image3 {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  left: 601px;
-  top: 1188px;
-  
-  background: #C4C4C4;
-  border-radius: 4px;
-}
-
-.printScreen__image4 {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  left: 773px;
-  top: 1188px;
-  
-  background: #C4C4C4;
-  border-radius: 4px;
-}
-
-.printScreen__image5 {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  left: 945px;
-  top: 1188px;
-  
-  background: #C4C4C4;
-  border-radius: 4px;
-}
-
-.printScreen__image6 {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  left: 1117px;
-  top: 1188px;
-  
-  background: #C4C4C4;
-  border-radius: 4px;
-}
-
-.printScreen__image__crosslineH {
-  position: absolute;
-  width: 80px;
-  height: 1px;
-  left: 35px;
-  top: 75px;
-  
-  border: 1px solid #FFFFFF;
-}
-
-.printScreen__image__crosslineV {
-  position: absolute;
-  width: 1px;
-  height: 80px;
-  left: 75px;
-  top: 35px;
-  
-  border: 1px solid #FFFFFF;
-}
-
-.printScreen__delete {
-  position: absolute;
-  width: 53px;
-  height: 18px;
-  left: 85px;
-  top: 1344px;
-  
-  font-family: Tahoma;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 130.8%;
-
-  color: #F00000;
-}
 
 .activity__text {
   position: absolute;
@@ -441,7 +444,7 @@ border-radius: 4px;
 
 .category__content {
   position: absolute;
-  width: 1056px;
+  width: 1020px;
   height: 135px;
   left: 211px;
   top: 1467px;
@@ -506,7 +509,7 @@ border-radius: 4px;
 
 .applicationInfo__data {
   position: absolute;
-  width: 120px;
+  width: 200px;
   height: 224px;
   left: 280px;
   top: 1657px;
@@ -525,13 +528,13 @@ border-radius: 4px;
   position: absolute;
   width: 51px;
   height: 24px;
-  left: 86px;
-  top: 1952px;
+  left: 105px;
+  top: 1080px;
   
   font-family: Tahoma;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 130.8%;
   /* identical to box height, or 24px */
   
@@ -539,71 +542,36 @@ border-radius: 4px;
   color: #000000;
 }
 
-.video__image0 {
+.videos {
   position: absolute;
-  width: 150px;
-  height: 150px;
+  width: 1155px;
+  height: 180px;
   left: 85px;
-  top: 2003px;
+  top: 1120px;
+  overflow-x: auto;
+  overflow-y: auto;
   
-  background: #C4C4C4;
-  border-radius: 4px;  
+  /* background: #C4C4C4; */
+  border:2px solid #00000042;
 }
 
-.video__image1 {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  left: 257px;
-  top: 2003px;
+.video {
+  position: relative;
+  display: inline-block;
+  width: 256px;
+  height: 160px;
+  margin: 10px;
+  margin-right: 0px;
+  margin-bottom: 0px;
   
-  background: #C4C4C4;
-  border-radius: 4px;
+  background: #fbff00;
+  border-radius: 15px;  
+  border:2px solid #000000;
+
+  background: url(../images/videoImage.jpg);  
+  background-size: cover;
 }
 
-.video__image2 {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  left: 429px;
-  top: 2003px;
-  
-  background: #C4C4C4;
-  border-radius: 4px;
-}
-
-.video__image3 {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  left: 601px;
-  top: 2003px;
-  
-  background: #C4C4C4;
-  border-radius: 4px;
-}
-
-.video__image4 {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  left: 773px;
-  top: 2003px;
-  
-  background: #C4C4C4;
-  border-radius: 4px;
-}
-
-.video__image5 {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  left: 945px;
-  top: 2003px;
-  
-  background: #C4C4C4;
-  border-radius: 4px;
-}
 
 .video__image6 {
   position: absolute;
@@ -636,20 +604,19 @@ border-radius: 4px;
   border: 1px solid #FFFFFF;
 }
 
-.video__delete {
+.video__add {
   position: absolute;
-  width: 53px;
-  height: 18px;
-  left: 86px;
-  top: 2159px;
-  
-  font-family: Tahoma;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 130.8%;
+  width: 48px;
+  height: 48px;
+  left: 1190px;
+  top: 1305px;
 
-  color: #F00000;
+  background-image: url(/images/Plus_36851.png);
+  background-size: cover;
+}
+
+.video__add:hover {
+  cursor: pointer;
 }
 
 .versions__info {
@@ -657,7 +624,8 @@ border-radius: 4px;
   width: 418px;
   height: 120px;
   left: 86px;
-  top: 2319px;
+  top: 1950px;
+  /*background-color: #fbff00;*/
 }
 
 .versions__text {
@@ -665,7 +633,7 @@ border-radius: 4px;
   width: 59px;
   height: 24px;
   left: 86px;
-  top: 2275px;
+  top: 1900px;
   
   font-family: Tahoma;
   font-style: normal;
@@ -707,7 +675,7 @@ border-radius: 4px;
   width: 24px;
   height: 24px;
   left: 86px;
-  top: 2450px;
+  top: 2075px;
 }
 
 .versions__plus__crosslineH {

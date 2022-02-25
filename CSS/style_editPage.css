@@ -6,7 +6,7 @@
   position: absolute;
   width: 90px;
   height: 30px;
-  left: 1173px;
+  left: 1025px;
   top: 119px;
   
   background: #FFFFFF;
@@ -36,7 +36,7 @@
   position: absolute;
   width: 110px;
   height: 30px;
-  left: 1275px;
+  left: 1125px;
   top: 119px;
   
   background: #0062C1;
@@ -91,7 +91,7 @@ color: #000000;
 
 .namePage__input {
 position: absolute;
-width: 1093px;
+width: 945px;
 height: 40px;
 left: 295px;
 top: 186px;
@@ -121,7 +121,7 @@ border-radius: 4px;
 
 .sinonimURL__input {
   position: absolute;
-  width: 1093px;
+  width: 945px;
   height: 40px;
   left: 295px;
   top: 281px;
@@ -201,7 +201,7 @@ border-radius: 4px;
 
 .textEditor textarea{
   position: absolute;
-  width: 1300px;
+  width: 1155px;
   height: 354px;  
   /*background: url(../images/texteditor.png); */
   /* background-size: cover; */

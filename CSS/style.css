@@ -30,9 +30,9 @@ html {
 .mainPage
 {
   border: 1px solid #0000006e;
-  background: #f8f8f8;
+  background: #eeeeee;
   position: relative;
-  width: 1440px;
+  width: 1320px;
   left: 50%;
   margin-left: -720px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.75);

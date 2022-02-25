@@ -1,13 +1,13 @@
 .header {
-  width: 1438px;
+  width: 1315px;
   height: 80px;
-  background: #bbbbbb;
+  background: #ffffff;
 
   padding-left: 10px;
   
   font-family: Tahoma;
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 20px;
   line-height: 130.8%;
 }
@@ -20,11 +20,17 @@
   padding-top: 25px;
   padding-left: 20px;
   padding-right: 20px;
+  color: #000;
   
 }
 
+.header .header__Active {
+  padding-top: 20px;
+}
+
+
 .header a:visited {
-  color: #ffffff;
+  color: #000000;
 }
 
 
@@ -54,6 +60,8 @@
 
 
 .header__Active {
-  background-color: #0000FF;
-  box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.9);
+  background-color: #eeeeee;
+  border-top: 5px solid rgb(0, 0, 255);
+  /*box-shadow: inset 0px 0px 5px rgba(76, 65, 224, 0.9);*/
+  /*color: #ffffff;*/
 }
