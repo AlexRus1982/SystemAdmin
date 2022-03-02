@@ -6,6 +6,7 @@ class BaseConnection
     private $db_username    = 'root';
     private $db_password    = '';
     private $db_name        = 'apkshki';
+    private $db_work        = 'apkshki_full_base_txt2';
     private $db_charset     = 'utf8';
     private $is_connected   = null;
     
@@ -48,7 +49,7 @@ class BaseConnection
         );
 
         $pageNumber = $_GET['pageNumber'];
-        $sql = 'SELECT id, main_image, name, downloads, activity FROM `apkshki_full_base_txt2`';
+        $sql = 'SELECT id, main_image, name, downloads, activity FROM `' . $this->db_work . '`';
         $result = $this->getQuery($sql);
         $rowsCount = mysqli_num_rows($result);
         $json['maxRecords'] = $rowsCount;
@@ -60,6 +61,9 @@ class BaseConnection
             }
             else if ($pageFilter == 'apps'){
                 $sql .= ' WHERE category LIKE "Приложения>%"';
+            }
+            else if ($pageFilter == 'popular'){
+                $sql .= ' ORDER BY downloads DESC';
             }
             else if (strlen($pageFilter) > 0 and $pageFilter != 'all'){
                 $sql .= ' WHERE category = "' . $pageFilter . '"';
@@ -98,7 +102,7 @@ class BaseConnection
         $appId = $_GET['appId'];
         $appActivity = $_GET['appActivity'];
 
-        $sql = 'UPDATE `apkshki_full_base_txt2` SET activity = ' . $appActivity . ' WHERE id = ' . $appId;
+        $sql = 'UPDATE `' . $this->db_work . '` SET activity = ' . $appActivity . ' WHERE id = ' . $appId;
 
         $result = $this->getQuery($sql);
     }
@@ -106,7 +110,7 @@ class BaseConnection
     public function deleteApp(/*$appId*/) {
         $appId = $_GET['appId'];
 
-        $sql = 'DELETE FROM `apkshki_full_base_txt2` WHERE id = ' . $appId;
+        $sql = 'DELETE FROM `' . $this->db_work . '` WHERE id = ' . $appId;
 
         $result = $this->getQuery($sql);
     }
@@ -114,7 +118,7 @@ class BaseConnection
     public function getAppInfo(/*$appId*/) {
         $appId = $_GET['appId'];
 
-        $sql = 'SELECT * FROM `apkshki_full_base_txt2` WHERE id = ' . $appId;
+        $sql = 'SELECT * FROM `' . $this->db_work . '` WHERE id = ' . $appId;
 
         $result = $this->getQuery($sql);
 

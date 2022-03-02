@@ -37,6 +37,7 @@
           <option value="all" class="option-all">Все</option>
           <option value="games" class="option-games">Игры</option>
           <option value="apps" class="option-apps">Приложения</option>
+          <option value="popular" class="option-popular">Популярные</option>
         </select>
         <div class="block1__space"></div>
         <div class="fromAll__text">345/600</div>
@@ -67,18 +68,13 @@
 
       <div class="block3">
         <div class="pageCounter">
-          <a href=""><<</a>
-          <a href=""><</a>
-          <a href="">1</a>
-          <a href="">2</a>
-          <a href="">..</a>
-          <a href="">28</a>
-          <a href="">29</a>
-          <a href="">></a>
-          <a href="">>></a>
+          <a href="" class="pageCounter__atBegin"><<</a>
+          <a href="" class="pageCounter__back"><</a>
+          <a href="" class="pageCounter__forward">></a>
+          <a href="" class="pageCounter__atEnd">>></a>
         </div>
         <div class="addButton">
-          <a href="" class="addButton__text"> Добавить приложение </a>
+          <div class="addButton__text"> Добавить приложение </div>
         </div>  
       </div>
     </div>
@@ -122,7 +118,7 @@
           $( ".bodyOfListApplication__item" ).click(function() {
             var clickId = $(this).attr('id');
 
-            if(confirm( "Edit" )) {
+            if(confirm( "Перейти к редактированию?" )) {
               $(location).attr('href', 'editApplication.html?appId=' + clickId);
             };
 
@@ -167,6 +163,23 @@
             $.get( "/php/base.php", { method: 'deleteApp', appId: clickId } );
           });
 
+          $(".pageCounter__atBegin").attr('href', 'index.html?page=1&filter=' + filter);
+          $(".pageCounter__back").attr('href', 'index.html?page=' + (Number(page) - 1) + '&filter=' + filter);
+          $(".pageCounter__forward").attr('href', 'index.html?page=' + (Number(page) + 1) + '&filter=' + filter);
+          
+          if (page <= 1) {
+            $(".pageCounter__back").css('visibility', 'hidden');
+            $(".pageCounter__atBegin").css('visibility', 'hidden');
+          }
+         
+          endPage = Math.ceil(json['filteredRecords'] / 20);          
+          if (page >= endPage) {
+            $(".pageCounter__forward").css('visibility', 'hidden');
+            $(".pageCounter__atEnd").css('visibility', 'hidden');
+          }
+        
+          $(".pageCounter__atEnd").attr('href', 'index.html?page=' + endPage + '&filter=' + filter);
+
         });
 
         if (filter) {
@@ -174,14 +187,16 @@
         }
         else filter = '';
 
-        if (filter == 'games')
-        {
+        if (filter == 'games') {
           $('.option-games').prop('selected', 'true');
         }
 
-        if (filter == 'apps')
-        {
+        if (filter == 'apps') {
           $('.option-apps').prop('selected', 'true');
+        }
+
+        if (filter == 'popular') {
+          $('.option-popular').prop('selected', 'true');
         }
         
         $.get( "/php/base.php", { method: 'getGameList' } )
@@ -208,9 +223,14 @@
 
         $('.category__select').change(function(){
            filter = $('.category__select').val();
-           $(location).attr('href', 'index.html?page=' + page + '&filter=' + filter);
-        })
+           $(location).attr('href', 'index.html?page=1&filter=' + filter);
+        });
 
+        $('.addButton').click(function(){
+          $(location).attr('href', 'editApplication.html?appId=-1');
+        });
+        
+        
       });
       
     </script> 

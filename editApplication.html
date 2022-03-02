@@ -28,7 +28,7 @@
       </div>
 
       <div class="viewButton">
-        <a href="" class="viewButton__text">  Просмотр </a>
+        <a href="http://test1/thegame.html?id=6" class="viewButton__text" target="_blank">Просмотр</a>
       </div>
 
       <div class="saveButton">
@@ -74,7 +74,6 @@
 
       <div class="activity__text">Активность</div>
       <div class="activity__checkBox">
-        <div class="activity__checkBoxArrow"></div>
       </div>
 
       <div class="category__text">Категории</div>
@@ -122,25 +121,32 @@
 
       <div class="versions__text">Версии</div>
 
-      <div class="versions__info">
-        <div class="versions__info__column0">Название</div><div class="versions__info__column1">Супер приложение версии 3.3</div>
-        <div class="versions__info__column0">Размер</div><div class="versions__info__column1">55 МБ</div>
-        <div class="versions__info__column0">Дата загрузки</div><div class="versions__info__column1">22.10.1968</div>
-        <div class="versions__info__column0">Ссылка на файл</div><div class="versions__info__column1">адрес сайта</div>
+      <div class="versions__list">
+        <!--
+        <div class="version__info">
+          <div class="version__info__column0">Название</div><div class="version__info__column1">Супер приложение версии 3.3</div>
+          <div class="version__info__column0">Размер</div><div class="version__info__column1">55 МБ</div>
+          <div class="version__info__column0">Дата загрузки</div><div class="version__info__column1">22.10.1968</div>
+          <div class="version__info__column0">Ссылка на файл</div><div class="version__info__column1">адрес сайта</div>
+        </div>
+        -->
       </div>
 
-      <div class="versions__plus">
-        <a href="" class="versions__plus__crosslineH"></a>
-        <a href="" class="versions__plus__crosslineV"></a>
-      </div>
+      <div class="versions__add"></div>
 
     </div>
 
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous">    
+    </script>
+
+    <script
+      src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+      integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY="
+      crossorigin="anonymous">      
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
@@ -182,28 +188,135 @@
           $('.imageApplication').append('<img src="' + json['main_image'] + '" class="imageApplication__image"></img>');
           $('.nicEdit-main').append(json['description']);
 
+          $('.imageApplication__edit-button').click(function() {
+            
+            var parent = $(this).parent();            
+            var image = parent.find('img');
+
+            var path = prompt("Изменить путь", image.attr('src'));
+            if (path != null && path != '') {
+              image.attr('src', path);
+            }
+
+          });
+
+          $('.imageApplication__delete-button').click(function() {
+            var result = confirm("Удалить картинку?");
+
+            if (result) {
+              var parent = $(this).parent();
+              var image = parent.find('img').attr('src', '');
+            }
+          });
+
 
           if (json['images'].length > 0) {
             var images = json['images'].split(';');
             for (let i = 0; i < images.length; i++)
             {
-              let image = '<a href="' + images[i] + '" target="_blank"><img class="printScreen__image" src="' + images[i] + '"></img></a>';
+              let image   = '<div class="printScreen__image__wrapper">';
+                  image  += '<a href="' + images[i] + '" target="_blank">';
+                  image  += '<div class="printScreen__image__edit-button"></div>'
+                  image  += '<div class="printScreen__image__delete-button"></div>'
+                  image  += '<img class="printScreen__image" src="' + images[i] + '"></img>'
+                  image  += '</a></div>';
               $('.printScreen__images').append(image);
             }
+            $('.printScreen__images').sortable({
+              //helper: fixHelper,
+            });
           }
+
+
+          $('.printScreen__image__edit-button').click(function(event) {
+            
+            var parent = $(this).parent();            
+            var image = parent.find('img');
+
+            var path = prompt("Изменить путь", image.attr('src'));
+            if (path != null && path != '') {
+              image.attr('src', path);
+            }
+
+            event.preventDefault();
+          });
+
+          $('.printScreen__image__delete-button').click(function(event) {
+            var result = confirm("Удалить картинку?");
+            if (result) {
+              $(this).parent().remove();
+            }
+            event.preventDefault();
+          });
+
+          $('.printScreen__add').click(function() {
+            var path = prompt("Введите путь", '');
+            if (path != null && path != '') {
+              let image   = '<div class="printScreen__image__wrapper">';
+                  image  += '<a href="' + path + '" target="_blank">';
+                  image  += '<div class="printScreen__image__edit-button"></div>';
+                  image  += '<div class="printScreen__image__delete-button"></div>';
+                  image  += '<img class="printScreen__image" src="' + path + '"></img>';
+                  image  += '</a></div>';
+              $('.printScreen__images').append(image);
+            }
+          });
 
           if (json['video'].length > 0) {
             var videos = json['video'].split(';');      
             for (let i = 0; i < videos.length; i++)
             {
-              let video = '<iframe class="video" src="' + videos[i] + '" frameborder="0" allowfullscreen="allowfullscreen"></iframe>';
+              let video  = '<div class="video__wrapper">';
+                  video += '<div class="video__edit-button"></div>';
+                  video += '<div class="video__delete-button"></div>';
+                  video += '<iframe class="video" src="' + videos[i] + '" frameborder="0" allowfullscreen="allowfullscreen"></iframe>';
+                  video += '</div>';
+              
               $('.videos').append(video);
+              /*
+              $('.videos').sortable({
+              //helper: fixHelper,
+              });
+              */
             }
-
             /*
             <iframe src="https://www.youtube.com/embed/8nqKrrxlkio" width="160" height="100" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
             */
           }
+
+          $('.video__edit-button').click(function(event) {
+            
+            var parent = $(this).parent();            
+            var video = parent.find('iframe');
+
+            var path = prompt("Изменить путь", video.attr('src'));
+            if (path != null && path != '') {
+              video.attr('src', path);
+            }
+
+            event.preventDefault();
+          });
+
+          $('.video__delete-button').click(function(event) {
+            var result = confirm("Удалить видео?");
+            if (result) {
+              $(this).parent().remove();
+            }
+            event.preventDefault();
+          });
+
+          $('.video__add').click(function() {
+            var path = prompt("Введите путь", '');
+            if (path != null && path != '') {
+              let video  = '<div class="video__wrapper">';
+                  video += '<div class="video__edit-button"></div>';
+                  video += '<div class="video__delete-button"></div>';
+                  video += '<iframe class="video" src="' + path + '" frameborder="0" allowfullscreen="allowfullscreen"></iframe>';
+                  video += '</div>';
+              
+              $('.videos').append(video);
+            }
+          });
 
 
         /*
@@ -248,9 +361,60 @@
             appInfo  += json['downloads'] + "<br>";
             appInfo  += 'бесплатно' + "<br>";
         $('.applicationInfo__data').html(appInfo);
+        $('.category__content').html(category);
 
 
+        var activity = json['activity'];
+        if (activity == '1') {
+          $('.activity__checkBox').append('<div class="activity__checkBoxArrow"></div>');
+        }
+
+        $('.activity__checkBox').click(function(){
+          var isArrow = $(this).find('.activity__checkBoxArrow');
+          if (isArrow.length > 0) {
+            $('.activity__checkBoxArrow').remove();
+          }
+          else {
+            $('.activity__checkBox').append('<div class="activity__checkBoxArrow"></div>');
+          }
         });
+
+        let versions = new Array();
+        versions.push(json['version1']);
+        versions.push(json['version2']);
+        versions.push(json['version3']);
+        versions.push(json['version4']);
+
+        for (let i = 0; i < versions.length; i++) {
+          if (versions[i] != '') {
+            let version_elements = versions[i].split(';');
+            let version_number = version_elements[1].split(':')[1];
+            let version_date   = version_elements[2].split(':')[1];
+            let version_html  = '';
+                version_html += '<div class="version__info">';
+                version_html += '  <div class="version__info__column0">Версия</div><div class="version__info__column1">' + version_number + '</div>';
+                version_html += '  <div class="version__info__column0">Дата</div><div class="version__info__column1">' + version_date + '</div>';
+                version_html += '  <div class="version__info__column0">Ссылка на скачивание</div><div class="version__info__column1"><a href="' + version_elements[0] + '" target="_blank">скачать</a></div>';
+                version_html += '</div>';
+            $('.versions__list').append(version_html);          
+          }
+        }
+
+        /* ссылка версия добавлено
+        <div class="version__info">
+          <div class="version__info__column0">Название</div><div class="version__info__column1">Супер приложение версии 3.3</div>
+          <div class="version__info__column0">Размер</div><div class="version__info__column1">55 МБ</div>
+          <div class="version__info__column0">Дата загрузки</div><div class="version__info__column1">22.10.1968</div>
+          <div class="version__info__column0">Ссылка на файл</div><div class="version__info__column1">адрес сайта</div>
+        </div>
+        */
+        
+        $('.viewButton__text').attr('href', 'http://test1/thegame.html?id=' + appId);
+        /*
+        <a href="http://test1/thegame.html?id=6" class="viewButton__text"
+        */
+
+      });
 
 
 

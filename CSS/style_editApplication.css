@@ -1,12 +1,12 @@
 .mainPage {
-  height: 2526px;
+  height: 2250px;
 }
 
 .viewButton {
   position: absolute;
-  width: 90px;
+  width: 180px;
   height: 30px;
-  left: 825px;
+  left: 1055px;
   top: 100px;
   
   background: #FFFFFF;
@@ -19,8 +19,8 @@
   position: absolute;
   width: 63px;
   height: 18px;
-  left: 13px;
-  top: 6px;
+  left: 60px;
+  top: 5px;
   
   font-family: Tahoma;
   font-style: normal;
@@ -34,10 +34,10 @@
 
 .saveButton {
   position: absolute;
-  width: 110px;
+  width: 180px;
   height: 30px;
-  left: 925px;
-  top: 100px;
+  left: 1060px;
+  top: 2175px;
   
   background: #0062C1;
   border-radius: 4px;
@@ -47,7 +47,7 @@
   position: absolute;
   width: 68px;
   height: 18px;
-  left: 30px;
+  left: 60px;
   top: 5px;
   
   font-family: Tahoma;
@@ -66,7 +66,7 @@
   position: absolute;
   width: 17px;
   height: 17px;
-  left: 6px;
+  left: 36px;
   top: 4px;
 
   background: url(../images/arrow.png);  
@@ -223,6 +223,10 @@
   z-index: 0;
 }
 
+.imageApplication:hover .imageApplication__edit-button{
+  visibility: visible;
+}
+
 .imageApplication__edit-button {
   position: absolute;
   width: 32px;
@@ -230,6 +234,7 @@
   top: 10px;
   left: 10px;
   z-index: 1;
+  visibility: hidden;
   
   background: url(../images/edit-validated_40458.png);  
   background-size: cover;
@@ -246,15 +251,19 @@
   top: 10px;
   left: 52px;
   z-index: 1;
+  visibility: hidden;
   
   background: url(../images/Button_Delete-01_25095.png);  
   background-size: cover;
 }
 
+.imageApplication:hover .imageApplication__delete-button{
+  visibility: visible;
+}
+
 .imageApplication__delete-button:hover {
   cursor: pointer;
 }
-
 
 .imageApplication__image {
   position: absolute;
@@ -264,7 +273,6 @@
   border-radius: 15px;
   z-index: 2;
 }
-
 
 .imageAdd__text {
   position: absolute;
@@ -350,10 +358,13 @@
   border:1px solid #00000044;
 }
 
-
-.printScreen__image {
+.printScreen__image__wrapper {
   position: relative;
   display: inline-block;
+}
+
+
+.printScreen__image {
   width: auto;
   height: auto;
   max-width: 250px;
@@ -383,12 +394,55 @@
 }
 
 
+.printScreen__image__edit-button {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  visibility: hidden;
+  
+  background: url(../images/edit-validated_40458.png);  
+  background-size: cover;
+}
+
+.printScreen__image__edit-button:hover {
+  cursor: pointer;
+}
+
+.printScreen__image__wrapper:hover .printScreen__image__edit-button {
+  visibility: visible;
+}
+
+.printScreen__image__delete-button {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 10px;
+  left: 52px;
+  z-index: 1;
+  visibility: hidden;
+  
+  background: url(../images/Button_Delete-01_25095.png);  
+  background-size: cover;
+}
+
+.printScreen__image__delete-button:hover {
+  cursor: pointer;
+}
+
+.printScreen__image__wrapper:hover .printScreen__image__delete-button{
+  visibility: visible;
+}
+
+
 .activity__text {
   position: absolute;
   width: 94px;
   height: 24px;
   left: 85px;
-  top: 1410px;
+  top: 1350px;
   
   font-family: Tahoma;
   font-style: normal;
@@ -407,10 +461,14 @@
   width: 24px;
   height: 24px;
   left: 211px;
-  top: 1410px;
+  top: 1350px;
   
   background: #0062C1;
   border-radius: 4px;  
+}
+
+.activity__checkBox:hover {
+  cursor: pointer;
 }
 
 .activity__checkBoxArrow {
@@ -429,7 +487,7 @@
   width: 86px;
   height: 24px;
   left: 85px;
-  top: 1471px;
+  top: 1400px;
   
   font-family: Tahoma;
   font-style: normal;
@@ -444,10 +502,10 @@
 
 .category__content {
   position: absolute;
-  width: 1020px;
-  height: 135px;
+  width: 480px;
+  height: 175px;
   left: 211px;
-  top: 1467px;
+  top: 1400px;
   padding: 10px;
   
   background: #FFFFFF;
@@ -460,8 +518,8 @@
   position: absolute;
   width: 62px;
   height: 24px;
-  left: 1053px;
-  top: 1606px;
+  left: 510px;
+  top: 1585px;
   
   font-family: Tahoma;
   font-style: normal;
@@ -477,8 +535,8 @@
   position: absolute;
   width: 95px;
   height: 24px;
-  left: 1140px;
-  top: 1606px;
+  left: 590px;
+  top: 1585px;
   
   font-family: Tahoma;
   font-style: normal;
@@ -494,8 +552,8 @@
   position: absolute;
   width: 250px;
   height: 224px;
-  left: 86px;
-  top: 1657px;
+  left: 750px;
+  top: 1395px;
   
   font-family: Tahoma;
   font-style: normal;
@@ -511,8 +569,8 @@
   position: absolute;
   width: 200px;
   height: 224px;
-  left: 280px;
-  top: 1657px;
+  left: 950px;
+  top: 1395px;
   
   font-family: Tahoma;
   font-style: normal;
@@ -555,9 +613,12 @@
   border:2px solid #00000042;
 }
 
-.video {
+.video__wrapper {
   position: relative;
   display: inline-block;
+}
+
+.video {
   width: 256px;
   height: 160px;
   margin: 10px;
@@ -571,7 +632,6 @@
   background: url(../images/videoImage.jpg);  
   background-size: cover;
 }
-
 
 .video__image6 {
   position: absolute;
@@ -619,21 +679,54 @@
   cursor: pointer;
 }
 
-.versions__info {
+.video__edit-button {
   position: absolute;
-  width: 418px;
-  height: 120px;
-  left: 86px;
-  top: 1950px;
-  /*background-color: #fbff00;*/
+  width: 32px;
+  height: 32px;
+  top: 15px;
+  left: 15px;
+  z-index: 1;
+  visibility: hidden;
+  
+  background: url(../images/edit-validated_40458.png);  
+  background-size: cover;
+}
+
+.video__edit-button:hover {
+  cursor: pointer;
+}
+
+.video__wrapper:hover .video__edit-button {
+  visibility: visible;
+}
+
+.video__delete-button {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 15px;
+  left: 55px;
+  z-index: 1;
+  visibility: hidden;
+  
+  background: url(../images/Button_Delete-01_25095.png);  
+  background-size: cover;
+}
+
+.video__delete-button:hover {
+  cursor: pointer;
+}
+
+.video__wrapper:hover .video__delete-button{
+  visibility: visible;
 }
 
 .versions__text {
   position: absolute;
   width: 59px;
   height: 24px;
-  left: 86px;
-  top: 1900px;
+  left: 85px;
+  top: 1665px;
   
   font-family: Tahoma;
   font-style: normal;
@@ -647,9 +740,33 @@
    
 }
 
-.versions__info__column0{
+.versions__list {
   position: absolute;
-  width: 150px;
+  width: 1150px;
+  height: 400px;
+  left: 85px;
+  top: 1700px;
+  /*background-color: #fbff00;*/
+  overflow-x: auto;
+  overflow-y: auto;
+  
+  /* background: #C4C4C4; */
+  border:2px solid #00000042;  
+}
+
+.version__info {
+  width: 418px;
+  height: 120px;
+  position: relative;
+  display: inline-block;
+  margin-right: 80px;
+  /*background-color: #fbff00;*/
+}
+
+
+.version__info__column0{
+  position: absolute;
+  width: 200px;
   height: 30px;
   padding: 4px;
   
@@ -658,10 +775,10 @@
   border-radius: 4px 0px 0px 4px;
 }
 
-.versions__info__column1{
+.version__info__column1{
   width: 268px;
   height: 30px;
-  margin-left: 150px;
+  margin-left: 200px;
 
   padding: 4px;
   
@@ -670,30 +787,18 @@
   border-radius: 0px 4px 4px 0px;
 }
 
-.versions__plus {
+
+.versions__add {
   position: absolute;
-  width: 24px;
-  height: 24px;
-  left: 86px;
-  top: 2075px;
+  width: 48px;
+  height: 48px;
+  left: 1185px;
+  top: 2105px;
+
+  background-image: url(/images/Plus_36851.png);
+  background-size: cover;
 }
 
-.versions__plus__crosslineH {
-  position: absolute;
-  width: 20px;
-  height: 1px;
-  left: 2px;
-  top: 11px;
-  
-  border: 1px solid #656565;
-}
-
-.versions__plus__crosslineV {
-  position: absolute;
-  width: 1px;
-  height: 20px;
-  left: 11px;
-  top: 2px;
-  
-  border: 1px solid #656565;
+.versions__add:hover {
+  cursor: pointer;
 }
